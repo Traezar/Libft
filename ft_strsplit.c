@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/09 21:59:46 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:09:21 by rsathiad         ###   ########.fr       */
+/*   Created: 2018/07/11 15:11:37 by rsathiad          #+#    #+#             */
+/*   Updated: 2018/07/15 14:55:52 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char		**ft_strsplit(char const *s, char c)
 {
-	size_t	i;
-	char	*p;
+	char	**ap;
+	int		i;
+	int		row;
+	int		col;
 
-	p = s;
-	i = 0;
-	if (n == 0)
-		return ;
-	else
+	i = -1;
+	row = -1;
+	col = -1;
+	ap = malloc(ft_strlen(s));
+	if (!ap || !*ap)
+		return (NULL);
+	while (*s)
 	{
-		while (i < n)
+		while (s[++i] != c)
 		{
-			p[i] = 0;
-			i++;
+			ap[row][++col] = s[i];
 		}
+		ap[++row][col] = '\0';
+		col = 0;
 	}
+	free((void *)s);
+	s = NULL;
+	return (ap);
 }

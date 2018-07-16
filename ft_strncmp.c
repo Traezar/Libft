@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/09 21:59:46 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:09:21 by rsathiad         ###   ########.fr       */
+/*   Created: 2018/07/13 05:44:16 by rsathiad          #+#    #+#             */
+/*   Updated: 2018/07/15 14:05:41 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	char	*p;
 
-	p = s;
 	i = 0;
 	if (n == 0)
-		return ;
-	else
-	{
-		while (i < n)
-		{
-			p[i] = 0;
-			i++;
-		}
-	}
+		return (0);
+	while (*(s1 + i) == *(s2 + i) && i < n && *(s1 + i) != '\0')
+		i++;
+	if (i == n)
+		return (*(s1 + i - 1) - *(s2 + i - 1));
+	return (*(s1 + i) - *(s2 + i));
 }

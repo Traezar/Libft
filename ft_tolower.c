@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/09 21:59:46 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:09:21 by rsathiad         ###   ########.fr       */
+/*   Created: 2018/07/12 10:37:37 by rsathiad          #+#    #+#             */
+/*   Updated: 2018/07/14 10:30:50 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_tolower(int c)
 {
-	size_t	i;
-	char	*p;
-
-	p = s;
-	i = 0;
-	if (n == 0)
-		return ;
-	else
+	if (c >= 65 && c <= 90)
 	{
-		while (i < n)
-		{
-			p[i] = 0;
-			i++;
-		}
+		c += 32;
+		return (c);
 	}
+	return (c);
 }

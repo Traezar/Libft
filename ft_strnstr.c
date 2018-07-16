@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/09 21:59:46 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:09:21 by rsathiad         ###   ########.fr       */
+/*   Created: 2018/07/13 03:46:28 by rsathiad          #+#    #+#             */
+/*   Updated: 2018/07/16 13:05:52 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	size_t	i;
-	char	*p;
+	size_t		i;
+	size_t		j;
+	size_t		k;
+	size_t		check;
 
-	p = s;
 	i = 0;
-	if (n == 0)
-		return ;
-	else
+	while (s1[i] != '\0' && s1[j] != '\0')
 	{
-		while (i < n)
+		if (s1[i] == s2[j])
 		{
-			p[i] = 0;
-			i++;
+			k = i;
+			j = 0;
+			check = 1;
+			while (s1[++k] == s2[++j] && (++check < len))
+			{
+				if (check == len)
+					return ((char *)s1 + i);
+			}
 		}
 	}
+	return (NULL);
 }

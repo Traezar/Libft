@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/09 21:59:46 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:09:21 by rsathiad         ###   ########.fr       */
+/*   Created: 2018/07/15 16:19:50 by rsathiad          #+#    #+#             */
+/*   Updated: 2018/07/15 17:15:15 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	size_t	i;
-	char	*p;
-
-	p = s;
-	i = 0;
-	if (n == 0)
-		return ;
-	else
-	{
-		while (i < n)
-		{
-			p[i] = 0;
-			i++;
-		}
-	}
+	new->next = *alst;
+	*alst = new;
 }

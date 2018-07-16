@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/09 21:59:46 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:09:21 by rsathiad         ###   ########.fr       */
+/*   Created: 2018/07/15 14:01:20 by rsathiad          #+#    #+#             */
+/*   Updated: 2018/07/15 14:50:42 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	size_t	i;
-	char	*p;
-
-	p = s;
-	i = 0;
-	if (n == 0)
-		return ;
-	else
-	{
-		while (i < n)
-		{
-			p[i] = 0;
-			i++;
-		}
-	}
+	return (ft_strncat(s1, s2, ft_strlen(s2)));
 }

@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/09 21:59:46 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:09:21 by rsathiad         ###   ########.fr       */
+/*   Created: 2018/07/11 09:28:57 by rsathiad          #+#    #+#             */
+/*   Updated: 2018/07/15 12:58:01 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	size_t	i;
-	char	*p;
+	char	*p1;
+	char	*p2;
+	int		i;
+	int		j;
 
-	p = s;
 	i = 0;
-	if (n == 0)
-		return ;
-	else
+	j = 0;
+	p1 = (char *)s1;
+	p2 = (char *)s2;
+	while (*(p1 + i) && *(p2 + i))
 	{
-		while (i < n)
-		{
-			p[i] = 0;
-			i++;
-		}
+		if (*(p1 + i) == *(p2 + i))
+			j = 1;
+		else
+			return (j);
 	}
+	return (j);
 }

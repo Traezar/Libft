@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/09 21:59:46 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:09:21 by rsathiad         ###   ########.fr       */
+/*   Created: 2018/07/11 14:16:41 by rsathiad          #+#    #+#             */
+/*   Updated: 2018/07/15 12:38:18 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strtrim(char const *s)
 {
-	size_t	i;
-	char	*p;
+	char const *ret;
 
-	p = s;
-	i = 0;
-	if (n == 0)
-		return ;
-	else
-	{
-		while (i < n)
-		{
-			p[i] = 0;
-			i++;
-		}
-	}
+	if (s == NULL)
+		return (NULL);
+	while (*s == '\t' || *s == ' ' || *s == '\n')
+		s++;
+	if (*s == '\0')
+		return (ft_strnew(0));
+	ret = s + ft_strlen(s) - 1;
+	while (*ret == ' ' || *ret == '\n' || *ret == '\t')
+		ret--;
+	return (ft_strsub(s, 0, ret - s + 1));
 }

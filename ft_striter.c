@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/09 21:59:46 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:09:21 by rsathiad         ###   ########.fr       */
+/*   Created: 2018/07/11 00:13:42 by rsathiad          #+#    #+#             */
+/*   Updated: 2018/07/15 13:18:25 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	size_t	i;
-	char	*p;
+	int	i;
 
-	p = s;
 	i = 0;
-	if (n == 0)
-		return ;
-	else
+	while (s != '\0')
 	{
-		while (i < n)
-		{
-			p[i] = 0;
-			i++;
-		}
+		(*f)(&s[i]);
+		i++;
 	}
+	return ;
 }
