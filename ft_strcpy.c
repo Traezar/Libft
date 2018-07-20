@@ -6,7 +6,7 @@
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 14:18:05 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/16 11:07:21 by rsathiad         ###   ########.fr       */
+/*   Updated: 2018/07/18 11:45:57 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	return ((char *)ft_strncpy(dst, src, ft_strlen(src + 1)));
+	int	i;
+
+	i = -1;
+	while (src[++i] != '\0')
+		dst[i] = src[i];
+	dst[i] = '\0';
+	return (dst);
 }

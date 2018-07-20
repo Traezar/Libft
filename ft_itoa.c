@@ -6,38 +6,47 @@
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/11 16:03:10 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:52:31 by rsathiad         ###   ########.fr       */
+/*   Updated: 2018/07/19 22:01:39 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	get_int_length(int n)
+static int	ilen(int n)
 {
-	size_t	i;
+	int		len;
 
-	i = 0;
+	len = 1;
 	while (n /= 10)
-		i++;
-	return (i);
+		len++;
+	return (len);
 }
 
-char			*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	int		count;
-	int		size;
-	char	*p;
+	char	*str;
+	int		len;
+	int		tmp;
 
-	size = n;
-	count = get_int_length(n);
-	p = (char *)(malloc(count + 1));
-	if (!p)
-		return (NULL);
-	while (count < 0)
+	len = ilen(n);
+	tmp = n;
+	if (n < 0)
 	{
-		p[count + 1] = '\0';
-		p[count] = (n % 10) + '0';
-		n = n / 10;
+		tmp = -n;
+		len++;
 	}
-	return (p);
+	if ((str = ft_strnew(len)) == NULL)
+		return (NULL);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	len--;
+	str[len] = tmp % 10 + '0';
+	while (tmp /= 10)
+	{
+		len--;
+		str[len] = tmp % 10 + '0';
+	}
+	if (n < 0)
+		str[0] = '-';
+	return (str);
 }

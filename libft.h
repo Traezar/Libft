@@ -6,7 +6,7 @@
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/09 10:54:05 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 19:01:23 by rsathiad         ###   ########.fr       */
+/*   Updated: 2018/07/17 20:25:33 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
-size_t				*ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *s1, const char *s2);
@@ -60,7 +60,7 @@ void				ft_strclr(char *s);
 void				ft_striter(char	*s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strmap(char const *s, char (*f)(char));
-char				*ftstrmapi(char const *s, char (*f)(unsigned int, char));
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);

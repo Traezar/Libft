@@ -6,7 +6,7 @@
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 23:29:28 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/15 13:19:29 by rsathiad         ###   ########.fr       */
+/*   Updated: 2018/07/18 13:56:44 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_memdel(void **ap)
 {
+	if (!ap || !*ap)
+		return ;
 	free(*ap);
 	*ap = NULL;
 }

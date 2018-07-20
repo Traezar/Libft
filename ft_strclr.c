@@ -6,7 +6,7 @@
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/11 00:10:31 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/16 13:45:07 by rsathiad         ###   ########.fr       */
+/*   Updated: 2018/07/19 21:58:37 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_strclr(char *s)
 	char *p;
 
 	p = s;
+	if (!s || !p)
+		return ;
 	while (*p)
 	{
 		*p = '\0';

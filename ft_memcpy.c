@@ -6,13 +6,13 @@
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/09 23:48:51 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/14 10:21:53 by rsathiad         ###   ########.fr       */
+/*   Updated: 2018/07/18 12:22:19 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 	char	*ptr1;
