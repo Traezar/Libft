@@ -6,7 +6,7 @@
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 06:05:24 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/20 12:19:41 by rsathiad         ###   ########.fr       */
+/*   Updated: 2018/07/20 12:26:36 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int		ft_atoi(const char *str)
 {
-	int	nb;
-	int	check;
-	int	i;
+	int				nb;
+	int				check;
+	long long int	i;
 
 	i = 0;
 	nb = 0;
 	check = 0;
-	if ((str[i] == '\t') || (str[i] == '\r') || (str[i] == '\v')
-		|| (str[i] == '\f') || (str[i] == '\n') || (str[i] == ' '))
-	i++;
+	while ((str[i] == '\t') || (str[i] == '\r') || (str[i] == '\v')
+			|| (str[i] == '\f') || (str[i] == '\n') || (str[i] == ' '))
+		i++;
 	if (str[i] == '-')
 	{
 		check = 1;
@@ -34,7 +34,7 @@ int		ft_atoi(const char *str)
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
 		nb = nb * 10;
-		nb = nb + str[i++] - '0';
+		nb = nb + (long long int)str[i++] - '0';
 	}
 	if (check == 1)
 		return (-nb);
