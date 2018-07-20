@@ -6,7 +6,7 @@
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 06:05:24 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/20 12:18:11 by rsathiad         ###   ########.fr       */
+/*   Updated: 2018/07/20 12:19:41 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int		ft_atoi(const char *str)
 	}
 	if (str[i] == '+')
 		i++;
-	}
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
 		nb = nb * 10;
