@@ -6,7 +6,7 @@
 /*   By: rsathiad <3kiraj@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/11 15:11:37 by rsathiad          #+#    #+#             */
-/*   Updated: 2018/07/19 21:57:37 by rsathiad         ###   ########.fr       */
+/*   Updated: 2018/07/20 15:32:37 by rsathiad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char		**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!(ap = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1))))
+	if (!s || !(ap = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1))))
 		return (NULL);
 	while (s[i])
 	{
