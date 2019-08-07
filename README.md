@@ -1,7 +1,7 @@
 #  Libft
-T his Library is the first project of the 42 cursus. 42 has a rule in which you are not a llowed to use code you did not write. Libft stands for Library Forty-Two. I assume:)
+This Library is the first project of the 42 cursus. 42 has a rule in which you are not allowed to use code you did not write. Libft stands for Library Forty-Two. I assume:)
  
-D isclaimer : THIS WILL NOT WORK ON WINDOWS. 
+Disclaimer : THIS WILL NOT WORK ON WINDOWS. 
  
 ## List of functions implemented
 - ft_atoi
