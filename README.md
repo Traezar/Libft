@@ -4,73 +4,73 @@ This Library is the first project of the 42 cursus. 42 has a rule in which you a
 Disclaimer : THIS WILL NOT WORK ON WINDOWS. 
 
 ## List of functions implemented
-ft_atoi\n
-ft_bzero\n
-ft_isalnum\n
-ft_isalpha\n
-ft_isascii\n
-ft_isdigit\n
-ft_isprint\n
-ft_itoa\n
-ft_lstadd\n
-ft_lstdel\n
-ft_lstdelone\n
-ft_lstiter\n
-ft_lstmap\n
-ft_lstnew\n
-ft_memalloc\n
-ft_memccpy\n
-ft_memchr\n
-ft_memcmp\n
-ft_memcpy\n
-ft_memdel\n
-ft_memmove\n
-ft_memset\n
-ft_putchar_fd\n
-ft_putchar\n
-ft_putendl_fd\n
-ft_putendl\n
-ft_putnbr_fd\n
-ft_putnbr\n
-ft_putstr_fd\n
-ft_putstr\n
-ft_strcat\n
-ft_strchr\n
-ft_strclr\n
-ft_strcmp\n
-ft_strcpy\n
-ft_strdel\n
-ft_strdup\n
-ft_strequ\n
-ft_striter\n
-ft_striteri\n
-ft_strjoin\n
-ft_strlcat\n
-ft_strlen\n
-ft_strmap\n
-ft_strmapi\n
-ft_strncat\n
-ft_strncmp\n
-ft_strncpy\n
-ft_strnequ\n
-ft_strnew\n
-ft_strnstr\n
-ft_strrchr\n
-ft_strsplit\n
-ft_strstr\n
-ft_strsub\n
-ft_strtrim\n
-ft_tolower\n
-ft_toupper\n
+-ft_atoi
+-ft_bzero
+-ft_isalnum
+-ft_isalpha
+-ft_isascii
+-ft_isdigit
+-ft_isprint
+-ft_itoa
+-ft_lstadd
+-ft_lstdel
+-ft_lstdelone
+-ft_lstiter
+-ft_lstmap
+-ft_lstnew
+-ft_memalloc
+-ft_memccpy
+-ft_memchr
+-ft_memcmp
+-ft_memcpy
+-ft_memdel
+-ft_memmove
+-ft_memset
+-ft_putchar_fd
+-ft_putchar
+-ft_putendl_fd
+-ft_putendl
+-ft_putnbr_fd
+-ft_putnbr
+-ft_putstr_fd
+-ft_putstr
+-ft_strcat
+-ft_strchr
+-ft_strclr
+-ft_strcmp
+-ft_strcpy
+-ft_strdel
+-ft_strdup
+-ft_strequ
+-ft_striter
+-ft_striteri
+-ft_strjoin
+-ft_strlcat
+-ft_strlen
+-ft_strmap
+-ft_strmapi
+-ft_strncat
+-ft_strncmp
+-ft_strncpy
+-ft_strnequ
+-ft_strnew
+-ft_strnstr
+-ft_strrchr
+-ft_strsplit
+-ft_strstr
+-ft_strsub
+-ft_strtrim
+-ft_tolower
+-ft_toupper
 
 ### Getting Started
 This repo has a Makefile included.
 
 The Makefile has the following commands:
-`make` this compiles the binaries to object files, then uses the object files to compile the `Libft.a`:  Library.
-`make clean` : This removes just the directory containing the object files
-`make fclean` : This executes ` make clean` and removes the Libft.a file.
-`make re` : This executes `make fclean` and then recompiles using `make`
+-`make` this compiles the binaries to object files, then uses the object files to compile -the `Libft.a`:  Library.
+-`make clean` : This removes just the directory containing the object files
+-`make fclean` : This executes ` make clean` and removes the Libft.a file.
+-`make re` : This executes `make fclean` and then recompiles using `make`
 
 To get started simply type `make` then hit `Enter`
 
