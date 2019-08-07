@@ -37,17 +37,18 @@ DUMMY =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c
 
 $(NAME):
-			gcc  $(CFLAGS) $(SRC) $(HDR)
-			ar rc $(NAME) $(OBJ) $(HDR)
-
+			@gcc  $(CFLAGS) $(DUMMY)
+			@ar rc $(NAME) $(OBJ) $(HDR)
+			@mkdir obj && mv $(OBJ) obj
+			@echo " Libft.a :     \033[32m Compiled \033[0m"
 
 clean: 
-	rm -rf $(OBJ)
-	@ echo "Objects have been removed"
+	@rm -rf obj
+	@ echo "\033[0m Object Files : \033[31mRemoved\033[0m"
 
 fclean: clean
-	rm -rf $(NAME)
-	@ echo "Library has been removed"
+	@rm -rf $(NAME)
+	@ echo "\033[0m Libft.a :     \033[31m Removed\033[0m"
 
 re: fclean all
 
