@@ -14,7 +14,7 @@
 
 NAME = libft.a
 
-SRC = *.c
+SRC =src/*.c
 OBJ = *.o 
 HDR = libft.h
 
@@ -37,8 +37,8 @@ DUMMY =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c
 
 $(NAME):
-			@gcc  $(CFLAGS) $(DUMMY)
-			@ar rc $(NAME) $(OBJ) $(HDR)
+			@gcc  $(CFLAGS) $(SRC)
+			@ar rc $(NAME) $(OBJ)
 			@mkdir obj && mv $(OBJ) obj
 			@echo " Libft.a :     \033[32m Compiled \033[0m"
 
